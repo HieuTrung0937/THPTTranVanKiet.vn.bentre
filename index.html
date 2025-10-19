@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
+    <title>Menu Hamburger</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang web Trường THPT Trần Văn Kiết</title>
@@ -18,12 +19,111 @@
           <img src="picture/logoTruongTvk.jpg" alt="Logo Trường" class="logo" />
           <span class="school-name">Trường THPT Trần Văn Kiết</span>
         </div>
-        <ul class="menu">
-          <li><a href="#">Trang chủ</a></li>
-          <li><a href="#">Giới thiệu</a></li>
-          <li><a href="#">Tin tức</a></li>
-          <li><a href="#">Liên hệ</a></li>
-        </ul>
+  
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Thanh menu */
+    .navbar {
+        background: #003366;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Logo hoặc tên trang */
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Danh sách menu */
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    /* ------ PHẦN DÀNH CHO ĐIỆN THOẠI ------- */
+    /* Ẩn checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Nút 3 gạch */
+    .hamburger {
+        display: none;
+        font-size: 25px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* Khi màn hình nhỏ hơn 768px */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #003366;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .nav-links li {
+            padding: 10px 0;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        /* Khi checkbox được chọn, hiện menu */
+        #menu-toggle:checked + .hamburger + .nav-links {
+            display: flex;
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">TRANG WEB CỦA TÔI</div>
+
+    <!-- Checkbox để điều khiển menu -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Nhãn (nút 3 gạch) -->
+    <label for="menu-toggle" class="hamburger">☰</label>
+
+    <!-- Danh sách menu -->
+    <ul class="nav-links">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>  
+        
       </nav>
 
       <!-- Tin tức -->
