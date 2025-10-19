@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
+    <title>Menu Hamburger</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang web Trường THPT Trần Văn Kiết</title>
@@ -18,23 +19,118 @@
           <img src="picture/logoTruongTvk.jpg" alt="Logo Trường" class="logo" />
           <span class="school-name">Trường THPT Trần Văn Kiết</span>
         </div>
-        <ul class="menu">
-          <li><a href="#">Trang chủ</a></li>
-          <li><a href="#">Giới thiệu</a></li>
-          <li><a href="#">Tin tức</a></li>
-          <li><a href="#">Liên hệ</a></li>
-        </ul>
+  
+
+<style>
+s
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Thanh menu */
+    .navbar {
+        background: #003366;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Logo hoặc tên trang */
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Danh sách menu */
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    /* ------ PHẦN DÀNH CHO ĐIỆN THOẠI ------- */
+    /* Ẩn checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Nút 3 gạch */
+    .hamburger {
+        display: none;
+        font-size: 25px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* Khi màn hình nhỏ hơn 768px */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #003366;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .nav-links li {
+            padding: 10px 0;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        /* Khi checkbox được chọn, hiện menu */
+        #menu-toggle:checked + .hamburger + .nav-links {
+            display: flex;
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class = "box"></div>
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">☰</label>
+    <ul class="nav-links">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>  
+        
       </nav>
 
-      <!-- Tin tức -->
+      Tin tức
       <section class="news">
         <h2>Tin tức mới nhất</h2>
         <div class="news-container">
           <div class="news-item">🎓 Khai giảng năm học mới 2025-2026</div>
           <div class="news-item">
-            🏆 CLB STEM đạt giải Nhì cuộc thi KHKT cấp tỉnh
+            🏆 Có 88 học sinh đạt giải trong kỳ thi học sinh giỏi
           </div>
-          <div class="news-item">📢 Tuyển thành viên CLB Tin học</div>
+          <!-- <div class="news-item">📢 Tuyển thành viên CLB Tin học</div> -->
         </div>
       </section>
 
@@ -42,9 +138,7 @@
       <section class="club">
         <h2>Thông báo CLB</h2>
         <ul>
-          <li>CLB STEM họp vào thứ 5 hàng tuần.</li>
-          <li>CLB Tin học tổ chức workshop về AI vào tháng 11.</li>
-          <li>CLB Văn nghệ chuẩn bị cho lễ kỷ niệm 20/11.</li>
+          <li>CLB STEM họp vào thứ 7 hàng tuần.</li>
         </ul>
       </section>
 
@@ -57,11 +151,12 @@
           <li>Kết nối backend (Node.js + Express)</li>
           <li>Thêm cơ sở dữ liệu (MongoDB hoặc MySQL)</li>
         </ol>
+        <h2>Web đang trong quá trình xây dựng, đây chỉ là bản demo</h2>
       </section>
 
       <!-- Footer -->
       <footer class="footer">
-        © 2025 Trường THPT Trần Văn Kiết. Mọi quyền được bảo lưu.
+        © 2025 Trường THPT Demo. Mọi quyền được bảo lưu.
       </footer>
     </div>
     <script src="script.js"></script>

@@ -31,7 +31,9 @@ body {
   margin: 0 auto; /* Canh giữa */
   padding: 0 20px; /* Chừa khoảng cách 2 bên */
 }
-
+.box {
+  width: auto;
+}
 /* Đảm bảo mọi phần chính đều nằm trong container */
 header,
 nav,
